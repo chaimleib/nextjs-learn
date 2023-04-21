@@ -12,6 +12,9 @@ export default function() {
 
       <section className={utilStyles.headingMd}>
         <p>Hi! I'm going through the <a href="https://nextjs.org/learn">Next.js tutorial</a>!</p>
+        <ul>
+          <li><Link href="/posts/first-post">First post</Link></li>
+        </ul>
       </section>
     </Layout>
   );
