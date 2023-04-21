@@ -9,7 +9,7 @@ export default function() {
       <Head>
         <title>First Post</title>
       </Head>
-      <h1>First Post</h1>
+      <h1 className="text-xl font-medium mb-2">First Post</h1>
       <Image src="/images/profile.jpg" height={144} width={144} alt="profile" />
     </Layout>
   );

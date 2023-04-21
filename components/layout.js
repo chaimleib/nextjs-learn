@@ -1,8 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
 
-import styles from './layout.module.css';
-import utilStyles from '../styles/utils.module.css';
 import Link from 'next/link';
 
 const name = 'Chaim Halbert';
@@ -25,31 +23,31 @@ export default function({ children, home }) {
       <meta name="og:title" content={siteTitle} />
       <meta name="twiter:card" content="summary_large_image" />
     </Head>
-    <div className={utilStyles.margin1rem}>
-      <header className={styles.header}>
+    <div className="m-8">
+      <header className="flex flex-col items-center">
         {home ? <>
           <Image
             priority
             src="/images/profile.jpg"
-            className={utilStyles.borderCircle}
+            className="rounded-full"
             height={144}
             width={144}
             alt=""
           />
-          <h1 className={utilStyles.heading2Xl}>{name}</h1>
+          <h1 className="text-2xl font-semibold">{name}</h1>
         </> : <>
           <Link href="/">
             <Image
               priority
               src="/images/profile.jpg"
-              className={utilStyles.borderCircle}
+              className="rounded-full"
               height={144}
               width={144}
               alt=""
             />
           </Link>
-          <h2 className={utilStyles.headingLg}>
-            <Link href="/" className={utilStyles.colorInherit}>
+          <h2 className="text-lg font-semibold">
+            <Link href="/" className="text-inherit">
               {name}
             </Link>
           </h2>
@@ -57,7 +55,7 @@ export default function({ children, home }) {
       </header>
       <main>{children}</main>
       {!home && (
-        <div className={styles.backToHome}>
+        <div className="my-12">
           <Link href="/">Go back home</Link>
         </div>
       )}

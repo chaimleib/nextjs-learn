@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout, { siteTitle } from '../components/layout';
-import utilStyles from '../styles/utils.module.css';
 
 export default function() {
   return (
@@ -10,7 +9,7 @@ export default function() {
         <title>{siteTitle}</title>
       </Head>
 
-      <section className={utilStyles.headingMd}>
+      <section className="text-lg leading-6">
         <p>Hi! I'm going through the <a href="https://nextjs.org/learn">Next.js tutorial</a>!</p>
         <ul>
           <li><Link href="/posts/first-post">First post</Link></li>
