@@ -1,1 +1,8 @@
-This is a starter template for [Learn Next.js](https://nextjs.org/learn).
+Going through the [Learn Next.js](https://nextjs.org/learn) tutorial.
+
+To run on local:
+
+```sh
+npm i
+npm run dev
+```
