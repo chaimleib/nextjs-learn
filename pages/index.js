@@ -9,7 +9,7 @@ export default function() {
         <title>{siteTitle}</title>
       </Head>
 
-      <section className="text-lg leading-6">
+      <section className="text-lg leading-normal">
         <p>Hi! I'm going through the <a href="https://nextjs.org/learn">Next.js tutorial</a>!</p>
         <ul>
           <li><Link href="/posts/first-post">First post</Link></li>
