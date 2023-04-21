@@ -11,9 +11,6 @@ export default function() {
       </Head>
       <h1>First Post</h1>
       <Image src="/images/profile.jpg" height={144} width={144} alt="profile" />
-      <h2>
-        <Link href="/">Go back home</Link>
-      </h2>
     </Layout>
   );
 }
