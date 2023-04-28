@@ -2,7 +2,7 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import Head from 'next/head';
 import Layout from '../../components/layout';
 import Post from '../../components/post';
-import { getAllPostIds, getPostData } from '../../lib/posts';
+import { getAllPostIds, getPostData, IPost } from '../../lib/posts';
 
 export const getStaticPaths: GetStaticPaths = () => {
   const paths = getAllPostIds();
@@ -13,6 +13,10 @@ export const getStaticPaths: GetStaticPaths = () => {
 };
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
+  if (typeof params.id !== 'string') {
+    return { notFound: true };
+  }
+
   const post = await getPostData(params.id);
   return {
     props: {
@@ -21,7 +25,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-export default function MainPost({ post }) {
+export default function MainPost({ post }: { post: IPost }) {
   return (<>
     <Head>
       <title>{post.title}</title>
