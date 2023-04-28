@@ -42,3 +42,9 @@ button {
   padding: 0.5rem 1rem;
   font-weight: bold;
 }
+
+@layer components {
+  .truncate-hover-scroll {
+    @apply truncate hover:text-clip hover:overflow-x-auto
+  }
+}
