@@ -43,7 +43,7 @@ export async function getPostData(id) {
   return {
     id,
     contentHtml,
-    ...data,
+    ...(data as { date: string, title: string })
   };
 }
 
