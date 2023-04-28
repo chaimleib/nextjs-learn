@@ -1,17 +1,18 @@
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout, { siteTitle } from '../components/layout';
 import { PostMeta } from '../components/post';
 import { getSortedPostsData } from '../lib/posts';
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = await getSortedPostsData();
   return {
     props: {
       allPostsData,
     },
   };
-}
+};
 
 export default function({ allPostsData }) {
   return (
