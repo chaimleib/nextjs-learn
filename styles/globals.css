@@ -43,6 +43,18 @@ button {
   font-weight: bold;
 }
 
+article > content > p {
+  @apply my-4 indent-4
+}
+
+article > content ul {
+  @apply list-disc
+}
+
+article > content ul > li {
+  @apply ml-4 my-2
+}
+
 @layer components {
   .truncate-hover-scroll {
     @apply truncate hover:text-clip hover:overflow-x-auto
