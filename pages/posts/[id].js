@@ -1,5 +1,6 @@
 import { Fragment } from 'react';
 import Head from 'next/head';
+import Date from '../../components/date';
 import Layout from '../../components/layout';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 
@@ -52,7 +53,7 @@ function PostHeader({ post: { title, id, date }}) {
         <div className="inline-block">{id}</div>
         <span>•</span>
         <div className="inline-block">
-          <time datetime={date}>{date}</time>
+          <Date dateString={date} />
         </div>
       </section>
 
