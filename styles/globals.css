@@ -52,7 +52,7 @@ article > content ul {
 }
 
 article > content ul > li {
-  @apply ml-4 my-2
+  @apply ml-6 my-2
 }
 
 @layer components {

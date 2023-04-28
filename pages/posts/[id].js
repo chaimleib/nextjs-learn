@@ -1,7 +1,6 @@
-import { Fragment } from 'react';
 import Head from 'next/head';
-import Date from '../../components/date';
 import Layout from '../../components/layout';
+import Post from '../../components/post';
 import { getAllPostIds, getPostData } from '../../lib/posts';
 
 export async function getStaticPaths() {
@@ -26,33 +25,8 @@ export default function MainPost({ post }) {
     <Head>
       <title>{post.title}</title>
     </Head>
-    <Post post={post} />
-  </>);
-}
-
-export function Post({ post }) {
-  return (
     <Layout>
-      <article>
-        <PostHeader post={post} />
-        <content dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
-      </article>
+      <Post post={post} />
     </Layout>
-  );
-}
-
-function PostHeader({ post: { title, id, date }}) {
-  return (
-    <header>
-
-      <h1 className="text-2xl font-semibold text-center">{title}</h1>
-
-      <section
-        className="truncate-hover-scroll text-slate-500 text-sm text-center space-x-2"
-      >
-        <Date dateString={date} />
-      </section>
-
-    </header>
-  );
+  </>);
 }
