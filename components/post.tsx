@@ -9,7 +9,10 @@ export default function Post({ post }) {
         <PostMeta post={post} />
       </header>
 
-      <content dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
+      <div
+        className="text"
+        dangerouslySetInnerHTML={{ __html: post.contentHtml }}
+      />
 
     </article>
   );
