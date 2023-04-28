@@ -50,11 +50,7 @@ function PostHeader({ post: { title, id, date }}) {
       <section
         className="truncate-hover-scroll text-slate-500 text-sm text-center space-x-2"
       >
-        <div className="inline-block">{id}</div>
-        <span>•</span>
-        <div className="inline-block">
-          <Date dateString={date} />
-        </div>
+        <Date dateString={date} />
       </section>
 
     </header>
