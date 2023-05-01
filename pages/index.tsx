@@ -24,7 +24,7 @@ export default function Home({ allPostsData }: {
       </Head>
 
       <section className="text-lg leading-normal">
-        <p>Hi! I'm going through the <a href="https://nextjs.org/learn">Next.js tutorial</a>!</p>
+        <p>Hi! I&apos;m going through the <a href="https://nextjs.org/learn">Next.js tutorial</a>!</p>
         <h2 className="my-4 text-xl font-semibold">Blog posts:</h2>
         <ul>
           {allPostsData.map( (post: IPost) => {

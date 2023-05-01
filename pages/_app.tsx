@@ -1,6 +1,6 @@
 import { AppProps } from 'next/app';
 import '../styles/globals.css';
 
-export default function({ Component, pageProps }: AppProps) {
+export default function Blog({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />;
 }
