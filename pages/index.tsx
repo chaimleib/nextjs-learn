@@ -1,19 +1,22 @@
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
 import Link from 'next/link';
 import Layout, { siteTitle } from '../components/layout';
 import { PostMeta } from '../components/post';
-import { getSortedPostsData } from '../lib/posts';
+import { getSortedPostsData, IPost } from '../lib/posts';
 
-export async function getStaticProps() {
+export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = await getSortedPostsData();
   return {
     props: {
       allPostsData,
     },
   };
-}
+};
 
-export default function({ allPostsData }) {
+export default function Home({ allPostsData }: {
+  allPostsData: Array<IPost>,
+}) {
   return (
     <Layout home>
       <Head>
@@ -24,7 +27,7 @@ export default function({ allPostsData }) {
         <p>Hi! I'm going through the <a href="https://nextjs.org/learn">Next.js tutorial</a>!</p>
         <h2 className="my-4 text-xl font-semibold">Blog posts:</h2>
         <ul>
-          {allPostsData.map( (post) => {
+          {allPostsData.map( (post: IPost) => {
             const { id, title } = post;
             return (
               <li className="my-4 mx-4" key={id}>

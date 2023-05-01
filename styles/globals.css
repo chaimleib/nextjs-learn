@@ -43,15 +43,15 @@ button {
   font-weight: bold;
 }
 
-article > content > p {
+article > .text > p {
   @apply my-4 indent-4
 }
 
-article > content ul {
+article > .text ul {
   @apply list-disc
 }
 
-article > content ul > li {
+article > .text ul > li {
   @apply ml-6 my-2
 }
 

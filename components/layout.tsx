@@ -1,12 +1,14 @@
 import Head from 'next/head';
 import Image from 'next/image';
-
 import Link from 'next/link';
 
 const name = 'Chaim Halbert';
 export const siteTitle = 'Next.js Sample Website';
 
-export default function({ children, home }) {
+export default function Layout({ children, home }: {
+  children: React.ReactNode,
+  home?: true,
+}) {
   return <>
     <Head>
       <link rel="icon" href="/favicon.ico" />
